@@ -5,6 +5,9 @@ const connectDB = require('./config/db')
 // Connect DB
 connectDB();
 
+// Init middleware 
+app.use(express.json());
+
 app.get('/',  (req, res) => res.send('API running'));
 
 // Define routes
